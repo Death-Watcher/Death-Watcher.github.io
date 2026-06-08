@@ -61,6 +61,7 @@
     line-height: 1.15;
     color: var(--red);
     white-space: pre;
+    display: block;
   }
 
   /* info table */
@@ -126,22 +127,35 @@
     animation: blink 1.1s step-start infinite;
   }
 
-  /* ── Mobile: stack logo on top of info ── */
+  /* ── Responsive Anpassungen für Mobilgeräte ── */
   @media (max-width: 600px) {
-    body { font-size: 13px; padding: 16px; }
+    body { padding: 16px; }
 
     .top {
       grid-template-columns: 1fr;
-      gap: 1rem 0;
+      gap: 1.5rem 0;
     }
 
-    .logo { font-size: 11px; }
+    /* Das Logo skaliert jetzt dynamisch mit der Bildschirmbreite (vw) */
+    .logo { 
+      font-size: 2.7vw; 
+      line-height: 1.1;
+      letter-spacing: -0.05em; /* Schiebt die Blöcke minimal zusammen, falls nötig */
+      overflow-x: visible;
+    }
 
-    .info { font-size: 13px; }
+    .info { font-size: 13.5px; }
 
     .sections {
       grid-template-columns: 1fr;
-      gap: 1rem 0;
+      gap: 1.5rem 0;
+    }
+  }
+
+  /* Extrem kleine Bildschirme (z.B. alte iPhones / kleine Handys) */
+  @media (max-width: 360px) {
+    .logo {
+      font-size: 2.5vw;
     }
   }
 
@@ -159,14 +173,13 @@
 <body>
 <div class="terminal">
 
-  <!-- logo + info -->
   <div class="top">
-    <div class="logo">   ██████╗ ██████╗ ██████╗ ███████╗
-  ██╔════╝██╔═══██╗██╔══██╗██╔════╝
-  ██║     ██║   ██║██║  ██║█████╗
-  ██║     ██║   ██║██║  ██║██╔══╝
-  ╚██████╗╚██████╔╝██████╔╝███████╗
-   ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝</div>
+    <div class="logo"> ██████╗ ██████╗ ██████╗ ███████╗
+ ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+ ██║     ██║   ██║██║  ██║█████╗
+ ██║     ██║   ██║██║  ██║██╔══╝
+ ╚██████╗╚██████╔╝██████╔╝███████╗
+  ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝</div>
 
     <div class="info">
       <span class="info-key">user</span>    <span class="info-arrow">→</span> <span class="info-val">Death_Watcher</span>
@@ -174,22 +187,21 @@
       <span class="info-key">langs</span>   <span class="info-arrow">→</span> <span class="info-val">DE / EN</span>
       <span class="info-key">role</span>    <span class="info-arrow">→</span> <span class="info-val">Student / hobbyist dev</span>
       <span class="info-key">editor</span>  <span class="info-arrow">→</span> <span class="info-val">VS Code</span>
-      <span class="info-key">profile</span> <span class="info-arrow">→</span> <span class="info-val"><a href="https://discord.com/users/744934661368709200">discord</a></span>
+      <span class="info-key">profile</span> <span class="info-arrow">→</span> <span class="info-val"><a href="https://discord.com/users/744934661368709200" target="_blank" rel="noopener noreferrer">discord</a></span>
     </div>
   </div>
 
-  <!-- projects + links -->
   <div class="sections">
     <div class="section">
       <div class="section-title">── projects ──</div>
       <ul>
         <li>
           <span class="arrow">→</span>
-          <span><a href="https://github.com/Death-Watcher/listening-stats-android-concept">listening-stats-android-concept</a></span>
+          <span><a href="https://github.com/Death-Watcher/listening-stats-android-concept" target="_blank" rel="noopener noreferrer">listening-stats-android-concept</a></span>
         </li>
         <li>
           <span class="arrow">→</span>
-          <span><a href="https://github.com/Xndr2/listening-stats">listening-stats</a> <span class="note">(contributor)</span></span>
+          <span><a href="https://github.com/Xndr2/listening-stats" target="_blank" rel="noopener noreferrer">listening-stats</a> <span class="note">(contributor)</span></span>
         </li>
       </ul>
     </div>
@@ -197,13 +209,12 @@
     <div class="section">
       <div class="section-title">── links ──</div>
       <ul>
-        <li><span class="arrow">→</span> <a href="https://github.com/Death-Watcher">github</a></li>
-        <li><span class="arrow">→</span> <a href="https://discord.com/users/744934661368709200">discord</a></li>
+        <li><span class="arrow">→</span> <a href="https://github.com/Death-Watcher" target="_blank" rel="noopener noreferrer">github</a></li>
+        <li><span class="arrow">→</span> <a href="https://discord.com/users/744934661368709200" target="_blank" rel="noopener noreferrer">discord</a></li>
       </ul>
     </div>
   </div>
 
-  <!-- prompt -->
   <div class="prompt-line">
     <span class="user">death_watcher</span><span class="at">@</span><span class="host">dev</span>:<span class="path">~</span>$ <span class="cursor"></span>
   </div>
