@@ -136,11 +136,11 @@
       gap: 1.5rem 0;
     }
 
-    /* Das Logo skaliert jetzt dynamisch mit der Bildschirmbreite (vw) */
+    /* Das Logo skaliert dynamisch, ohne die Monospace-Blöcke zu verzerren */
     .logo { 
-      font-size: 2.7vw; 
-      line-height: 1.1;
-      letter-spacing: -0.05em; /* Schiebt die Blöcke minimal zusammen, falls nötig */
+      font-size: 2.8vw; 
+      line-height: 1.15;
+      letter-spacing: normal;
       overflow-x: visible;
     }
 
@@ -152,10 +152,10 @@
     }
   }
 
-  /* Extrem kleine Bildschirme (z.B. alte iPhones / kleine Handys) */
+  /* Extrem kleine Bildschirme */
   @media (max-width: 360px) {
     .logo {
-      font-size: 2.5vw;
+      font-size: 2.6vw;
     }
   }
 
@@ -186,8 +186,8 @@
       <span class="info-key">country</span> <span class="info-arrow">→</span> <span class="info-val">Germany</span>
       <span class="info-key">langs</span>   <span class="info-arrow">→</span> <span class="info-val">DE / EN</span>
       <span class="info-key">role</span>    <span class="info-arrow">→</span> <span class="info-val">Student / hobbyist dev</span>
-      <span class="info-key">editor</span>  <span class="info-arrow">→</span> <span class="info-val">VS Code</span>
-      <span class="info-key">profile</span> <span class="info-arrow">→</span> <span class="info-val"><a href="https://discord.com/users/744934661368709200" target="_blank" rel="noopener noreferrer">discord</a></span>
+      <span class="info-key">editor</span>  <span class="info-val">VS Code</span>
+      <span class="info-key">profile</span> <span class="info-val"><a href="https://discord.com/users/744934661368709200" target="_blank" rel="noopener noreferrer">discord</a></span>
     </div>
   </div>
 
