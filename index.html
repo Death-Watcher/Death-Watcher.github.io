@@ -17,7 +17,7 @@
   /* ── CSS Reset: because every browser has its own opinion ── */
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* ── Variables. Yes, it's fancy. No, I don't need Sass. ── */
+  /* ── Variables. Ja, ist fancy. Brauch ich Sass? Nee, is klar. ── */
   :root {
     --bg:      #0a0e14;  /* Night mode: enabled */
     --fg:      #b3b1ad;  /* Readable. Mostly. */
@@ -30,7 +30,7 @@
     --yellow:  #d79921;  /* Caution! */
   }
 
-  /* ── Body: Centered like my thoughts at 3 AM ── */
+  /* ── Body: Centered like my thoughts at 3 Uhr nachts ── */
   body {
     background: var(--bg);
     color: var(--fg);
@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
     padding: 24px 20px;
-    /* CRT scanlines. Because retro is cool. */
+    /* CRT scanlines. Retro. Läuft bei dir. */
     background-image: repeating-linear-gradient(
       0deg,
       transparent,
@@ -51,7 +51,7 @@
     );
   }
 
-  /* ── Terminal window. Content incoming in 0.1s. Suspense builds. ── */
+  /* ── Terminal window. Content incoming in 0.1s. Spannung steigt. ── */
   .terminal {
     max-width: 780px;
     width: 100%;
@@ -68,7 +68,7 @@
     margin-bottom: 1.6rem;
   }
 
-  /* ── The "logo". Yes, it's ASCII art. 2001 called, they want it back. ── */
+  /* ── The "logo". Yes, it's ASCII art. Handlungszwirbler: 2001 called. ── */
   .logo {
     font-size: 14px;
     line-height: 1.2;
@@ -112,12 +112,12 @@
     padding: 0;
   }
 
-  /* ── List items: arrow + text side by side. Like peanut butter & jelly. ── */
+  /* ── List items: arrow + text side by side. Digga, ist doch ganz einfach. ── */
   .section ul li { display: flex; gap: 0.4rem; align-items: baseline; }
   .section ul li .arrow { color: var(--dim); flex-shrink: 0; }
   .section ul li span:last-child { min-width: 0; overflow-wrap: break-word; }
 
-  /* ── Links. Red. Like a stoplight. ── */
+  /* ── Links. Red. Like a stoplight. Fühl ich. ── */
   a { color: var(--red); text-decoration: none; transition: color 0.15s; }
   a:hover { color: var(--red-hot); text-decoration: underline; }
 
@@ -169,7 +169,7 @@
     }
   }
 
-  /* ── Blink. Like me. But on a schedule. ── */
+  /* ── Blink. Like me. Aber nur am Wochenende. ── */
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50%       { opacity: 0; }
@@ -207,9 +207,9 @@
     </div>
   </div>
 
-  <!-- ──── Projects & Links. Valuable content. ──── -->
+  <!-- ──── Projects & Links. Inhaltlich wertvoll. ──── -->
   <div class="sections">
-    <!-- Projects: things I built. Some of them even work. -->
+    <!-- Projects: things I built. Manche funktionieren sogar. -->
     <div class="section">
       <div class="section-title">── projects ──</div>
       <ul>
@@ -224,7 +224,7 @@
       </ul>
     </div>
 
-    <!-- Links: how to follow me. Why though. -->
+    <!-- Links: how to follow me. Warum auch immer. -->
     <div class="section">
       <div class="section-title">── links ──</div>
       <ul>
@@ -240,6 +240,6 @@
   </div>
 
 </main>
-<!-- The end. Yes, that's it. Were you expecting more? -->
+<!-- Ende. Ja, das war's. Hast du was erwartet? -->
 </body>
 </html>
